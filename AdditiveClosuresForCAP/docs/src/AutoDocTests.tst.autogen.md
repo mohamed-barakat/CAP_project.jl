@@ -13,7 +13,7 @@ Rows( Z )
 julia> Display( Zmat )
 A CAP category with name Rows( Z ):
 
-83 primitive operations were used to derive 426 operations for this category which algorithmically
+83 primitive operations were used to derive 430 operations for this category which algorithmically
 * IsEquippedWithHomomorphismStructure
 * IsLinearCategoryOverCommutativeRingWithFinitelyGeneratedFreeExternalHoms
 * IsPreAbelianCategory
