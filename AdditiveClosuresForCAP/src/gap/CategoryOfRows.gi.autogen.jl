@@ -1493,48 +1493,49 @@ end );
     
 end );
 
-#= comment for Julia
 ##
 @InstallMethod( LaTeXOutput,
                [ IsCategoryOfRowsObject ],
                
   function( obj )
     
-    return @Concatenation( LaTeXOutput( UnderlyingRing( CapCategory( obj ) ) ), "^[1 \\times ", StringGAP( RankOfObject( obj ) ), "]" );
+    return @Concatenation( LaTeXOutput( UnderlyingRing( CapCategory( obj ) ) ), "^", LATEX_LBRACE, "1 \\times ", StringGAP( RankOfObject( obj ) ), LATEX_RBRACE );
     
 end );
 
 ##
 @InstallMethod( LaTeXOutput,
                [ IsCategoryOfRowsMorphism ],
-               
-  function( mor )
-    local matrix;
-    
-    matrix = LaTeXOutput( UnderlyingMatrix( mor ) );
-    
-    if (ValueOption( "OnlyDatum" ) == true)
-       
-       return @Concatenation(
-        """[\color[blue][""",
-        matrix,
-        """]]"""
-      );
+  @FunctionWithNamedArguments(
+    [ [ "OnlyDatum", false ] ],
+    function( CAP_NAMED_ARGUMENTS, mor )
+      local matrix;
       
-    else
+      matrix = LaTeXOutput( UnderlyingMatrix( mor ) );
       
-      return @Concatenation(
-        LaTeXOutput( Source( mor ) ),
-        """[\color[blue][\xrightarrow[""",
-        matrix,
-        """]]]""",
-        LaTeXOutput( Range( mor ) )
-      );
+      if (OnlyDatum == true)
+         
+         return @Concatenation(
+          LATEX_LBRACE, "\\color", LATEX_LBRACE, "blue", LATEX_RBRACE, LATEX_LBRACE,
+          matrix,
+          LATEX_RBRACE, LATEX_RBRACE
+        );
+        
+      else
+        
+        return @Concatenation(
+          LaTeXOutput( Source( mor ) ),
+          LATEX_LBRACE, "\\color", LATEX_LBRACE, "blue", LATEX_RBRACE, LATEX_LBRACE, "\\xrightarrow", LATEX_LBRACE,
+          matrix,
+          LATEX_RBRACE, LATEX_RBRACE, LATEX_RBRACE,
+          LaTeXOutput( Range( mor ) )
+        );
+        
+      end;
       
-    end;
-    
-end );
-# =#
+    end
+  )
+);
 
 ####################################
 ##

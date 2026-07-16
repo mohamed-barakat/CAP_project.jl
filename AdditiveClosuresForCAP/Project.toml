@@ -8,8 +8,8 @@ authors = [
 	"Fabian Zickgraf <f.zickgraf@dashdos.com>"
 ]
 
-# Transpiled from GAP's AdditiveClosuresForCAP v2026.07-02
-version = "0.2.5"
+# Transpiled from GAP's AdditiveClosuresForCAP v2026.07-03
+version = "0.2.6"
 
 [deps]
 CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"
@@ -23,7 +23,7 @@ MonoidalCategories = "bfd98c86-782f-4b94-909f-74167f1eb613"
 
 [compat]
 julia = "1.11"
-CAP = "~0.8.11"
+CAP = "~0.8.14"
 MatricesForHomalg = "~0.1.1"
 LinearAlgebraForCAP = "0.2"
 MonoidalCategories = "0.3"
