@@ -6,8 +6,8 @@ authors = [
 	"Tom Kuhmichel <tom.kuhmichel@student.uni-siegen.de>"
 ]
 
-# Transpiled from GAP's CartesianCategories v2026.06-02
-version = "0.4.1"
+# Transpiled from GAP's CartesianCategories v2026.07-01
+version = "0.4.2"
 
 [deps]
 CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"
