@@ -8,8 +8,8 @@ authors = [
 	"Fabian Zickgraf <f.zickgraf@dashdos.com>"
 ]
 
-# Transpiled from GAP's MonoidalCategories v2026.06-01
-version = "0.3.0"
+# Transpiled from GAP's MonoidalCategories v2026.06-02
+version = "0.3.1"
 
 [deps]
 CAP = "d64df2ee-d2bb-46f4-8cbc-f03bb858f8cb"
