@@ -11,8 +11,7 @@ include( "gap/ToposMethodRecordDeclarations.autogen.gd.autogen.jl" );
 ## Category of relations
 include( "gap/CategoryOfRelations.gd.autogen.jl" );
 
-## Tools
-include( "gap/Tools.gd.autogen.jl" );
+include( "gap/ToolsUsingDigraphs.gd.autogen.jl" );
 
 ## DPO
 include( "gap/DPO.gd.autogen.jl" );
